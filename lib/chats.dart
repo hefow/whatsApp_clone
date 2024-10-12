@@ -8,11 +8,11 @@ class Chats extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'WhatsApp',
           style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
         ),
-        actions: [
+        actions: const [
           SizedBox(
             width: 10,
           ),
@@ -35,20 +35,28 @@ class Chats extends StatelessWidget {
               height: 10,
               color: Colors.grey.shade200,
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            UserCard(),
-            UserCard(),
-            UserCard(),
-            UserCard(),
-            UserCard()
+            const UserCard(),
+            const UserCard(),
+            const UserCard(),
+            const UserCard(),
+            const UserCard()
           ],
         ),
       ),
       bottomNavigationBar: Container(
-        child: Row(
-          children: [Icon(Icons.chat_bubble), Text('data')],
+        padding: const EdgeInsets.all(30),
+        decoration: BoxDecoration(
+          color: Colors.grey.shade100,
+        ),
+        child: const Row(
+          children: [
+            Column(
+              children: [Icon(Icons.chat_sharp), Text('data')],
+            )
+          ],
         ),
       ),
     );

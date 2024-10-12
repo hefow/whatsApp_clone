@@ -10,7 +10,7 @@ class UserCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 8,
               ),
               ClipOval(
@@ -19,14 +19,14 @@ class UserCard extends StatelessWidget {
                   width: 60,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    child: Row(
+                    child: const Row(
                       children: [
                         Text('Ahmed Ali'),
                         SizedBox(
@@ -36,7 +36,7 @@ class UserCard extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Text('message')
+                  const Text('message')
                 ],
               )
             ],
