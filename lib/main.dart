@@ -4,6 +4,6 @@ import 'package:whats_app_clone/chats.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: Call(),
+    home: Chats(),
   ));
 }

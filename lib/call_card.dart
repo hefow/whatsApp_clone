@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class UserCard extends StatelessWidget {
-  const UserCard({super.key});
+class CallCard extends StatelessWidget {
+  const CallCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class UserCard extends StatelessWidget {
                         SizedBox(
                           width: 210,
                         ),
-                        Text('3:00')
+                        Icon(Icons.call)
                       ],
                     ),
                   ),

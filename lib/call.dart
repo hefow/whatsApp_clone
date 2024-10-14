@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whats_app_clone/call_card.dart';
+import 'package:whats_app_clone/chats.dart';
+import 'package:whats_app_clone/user_card.dart';
 
 class Call extends StatelessWidget {
   const Call({super.key});
@@ -7,7 +10,7 @@ class Call extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Calls'),
+        title: const Text('Calls'),
         actions: const [
           SizedBox(
             width: 10,
@@ -25,34 +28,54 @@ class Call extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('data'),
-            SizedBox(
-              height: 5,
+            Padding(padding: EdgeInsets.symmetric(horizontal: 14)),
+            Container(
+              child: Text(
+                'Favourites',
+                style: TextStyle(fontSize: 20),
+              ),
+              margin: EdgeInsets.only(left: 20),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             Row(
               children: [
-                // Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
+                Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
                 Container(
                   decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius: BorderRadius.circular(50)),
-                  //padding: EdgeInsets.all(7),
-                  child: Icon(
+                  padding: EdgeInsets.all(7),
+                  child: const Icon(
                     Icons.heart_broken_rounded,
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 8,
                 ),
-                Text('Add favourite')
+                const Text('Add favourite')
               ],
             ),
-            SizedBox(
-              height: 7,
+            const SizedBox(height: 10),
+            Container(
+              child: const Text(
+                'Recent',
+                style: TextStyle(fontSize: 18),
+              ),
+              margin: EdgeInsets.only(left: 20),
             ),
-            Text('Recent')
+            CallCard(),
+            CallCard(),
+            CallCard(),
+            CallCard(),
+            CallCard(),
+            CallCard(),
+            CallCard(),
+            CallCard(),
           ],
         ),
       ),

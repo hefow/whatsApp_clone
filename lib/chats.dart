@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whats_app_clone/call.dart';
 import 'package:whats_app_clone/user_card.dart';
 
 class Chats extends StatelessWidget {
@@ -42,22 +43,36 @@ class Chats extends StatelessWidget {
             const UserCard(),
             const UserCard(),
             const UserCard(),
-            const UserCard()
-          ],
-        ),
-      ),
-      bottomNavigationBar: Container(
-        padding: const EdgeInsets.all(30),
-        decoration: BoxDecoration(
-          color: Colors.grey.shade100,
-        ),
-        child: const Row(
-          children: [
-            Column(
-              children: [Icon(Icons.chat_sharp), Text('data')],
+            const UserCard(),
+            const UserCard(),
+            const UserCard(),
+            const UserCard(),
+            const UserCard(),
+            const UserCard(),
+            const UserCard(),
+            const UserCard(),
+            const UserCard(),
+            const UserCard(),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(padding: EdgeInsets.all(10)),
+                Icon(Icons.lock),
+                Padding(padding: EdgeInsets.symmetric(horizontal: 7)),
+                Text('your personal messeges are end-to-end encrypted.')
+              ],
             )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Call();
+        },
+        child: Icon(Icons.control_point_duplicate_sharp),
       ),
     );
   }
