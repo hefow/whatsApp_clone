@@ -30,25 +30,25 @@ class Call extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(padding: EdgeInsets.symmetric(horizontal: 14)),
+            const Padding(padding: EdgeInsets.symmetric(horizontal: 14)),
             Container(
+              margin: const EdgeInsets.only(left: 20),
               child: Text(
                 'Favourites',
                 style: TextStyle(fontSize: 20),
               ),
-              margin: EdgeInsets.only(left: 20),
             ),
             const SizedBox(
               height: 10,
             ),
             Row(
               children: [
-                Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
+                const Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
                 Container(
                   decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius: BorderRadius.circular(50)),
-                  padding: EdgeInsets.all(7),
+                  padding: const EdgeInsets.all(7),
                   child: const Icon(
                     Icons.heart_broken_rounded,
                     color: Colors.white,
@@ -62,20 +62,40 @@ class Call extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Container(
+              margin: const EdgeInsets.only(left: 20),
               child: const Text(
                 'Recent',
                 style: TextStyle(fontSize: 18),
               ),
-              margin: EdgeInsets.only(left: 20),
             ),
-            CallCard(),
-            CallCard(),
-            CallCard(),
-            CallCard(),
-            CallCard(),
-            CallCard(),
-            CallCard(),
-            CallCard(),
+            const CallCard(
+              imgUrl: 'images/user2.png',
+              name: 'moha',
+              time: '40 minutes ago',
+              color: Colors.red,
+            ),
+            const CallCard(
+              imgUrl: 'images/user2.png',
+              name: 'Abdi',
+              time: '40 minutes ago',
+            ),
+            const CallCard(
+              imgUrl: 'images/user2.png',
+              name: 'aliii',
+              time: '30 minutes ago',
+              color: Colors.red,
+            ),
+            const CallCard(
+              imgUrl: 'images/user2.png',
+              name: 'Abdii',
+              time: '40 minutes ago',
+              color: Colors.red,
+            ),
+            const CallCard(
+              imgUrl: 'images/user2.png',
+              name: 'ahmed',
+              time: '40 minutes ago',
+            ),
           ],
         ),
       ),

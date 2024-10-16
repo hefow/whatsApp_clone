@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 
 class CallCard extends StatelessWidget {
-  const CallCard({super.key});
-
+  const CallCard(
+      {super.key,
+      required this.imgUrl,
+      required this.name,
+      required this.time,
+      this.color});
+  final String imgUrl;
+  final String name;
+  final String time;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -18,7 +27,7 @@ class CallCard extends StatelessWidget {
               ),
               ClipOval(
                 child: Image.asset(
-                  'images/user1.jpeg',
+                  imgUrl,
                   width: 60,
                 ),
               ),
@@ -29,17 +38,23 @@ class CallCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    child: const Row(
+                    child: Row(
                       children: [
-                        Text('Ahmed Ali'),
-                        SizedBox(
+                        Container(
+                          child: Text(
+                            name,
+                            style: TextStyle(
+                                fontSize: 20, color: color ?? Colors.black),
+                          ),
+                        ),
+                        const SizedBox(
                           width: 210,
                         ),
-                        Icon(Icons.call)
+                        const Icon(Icons.call)
                       ],
                     ),
                   ),
-                  const Text('message')
+                  Text(time)
                 ],
               )
             ],

@@ -39,24 +39,80 @@ class Chats extends StatelessWidget {
             const SizedBox(
               height: 8,
             ),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            const UserCard(),
-            SizedBox(
+            const UserCard(
+              imgUrl: 'images/user1.jpeg',
+              name: 'Osman',
+              time: '21:02',
+              message: 'wra ku away',
+            ),
+            const UserCard(
+              imgUrl: 'images/user2.png',
+              name: 'yaasin',
+              time: '12:02',
+              message: 'ok',
+            ),
+            const UserCard(
+              imgUrl: 'images/user3.png',
+              name: 'Abdinor',
+              time: '09:02',
+              message: 'football',
+            ),
+            const UserCard(
+              imgUrl: 'images/user4.jpeg',
+              name: 'nugaale',
+              time: '08:02',
+              message: 'main axis',
+            ),
+            const UserCard(
+              imgUrl: 'images/user1.jpeg',
+              name: 'shacir',
+              time: '21:02',
+              message: 'so bax',
+            ),
+            const UserCard(
+              imgUrl: 'images/user2.png',
+              name: 'Osman',
+              time: '11:02',
+            ),
+            const UserCard(
+              imgUrl: 'images/user3.png',
+              name: 'Abdinor',
+              time: '09:02',
+              message: 'football',
+            ),
+            const UserCard(
+              imgUrl: 'images/user4.jpeg',
+              name: 'nugaale',
+              time: '08:02',
+            ),
+            const UserCard(
+              imgUrl: 'images/user1.jpeg',
+              name: 'Osman',
+              time: '21:02',
+              message: 'wra ku away',
+            ),
+            const UserCard(
+              imgUrl: 'images/user2.png',
+              name: 'Osman',
+              time: '11:02',
+              message: 'wayee',
+            ),
+            const UserCard(
+              imgUrl: 'images/user3.png',
+              name: 'isma',
+              time: '02:02',
+              message: 'Germeny',
+            ),
+            const UserCard(
+              imgUrl: 'images/user4.jpeg',
+              name: 'ahmed duale',
+              time: '10:02',
+              message: 'muraadso kaso',
+            ),
+            const SizedBox(
               height: 10,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(padding: EdgeInsets.all(10)),
@@ -70,9 +126,9 @@ class Chats extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Call();
+          const Call();
         },
-        child: Icon(Icons.control_point_duplicate_sharp),
+        child: const Icon(Icons.control_point_duplicate_sharp),
       ),
     );
   }
