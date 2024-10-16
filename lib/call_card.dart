@@ -34,31 +34,27 @@ class CallCard extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    child: Row(
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          child: Text(
-                            name,
-                            style: TextStyle(
-                                fontSize: 20, color: color ?? Colors.black),
-                          ),
+                        Text(
+                          name,
+                          style: TextStyle(
+                              fontSize: 20, color: color ?? Colors.black),
                         ),
-                        const SizedBox(
-                          width: 210,
-                        ),
-                        const Icon(Icons.call)
+                        const Icon(Icons.call),
                       ],
                     ),
-                  ),
-                  Text(time)
-                ],
-              )
+                    Text(time),
+                  ],
+                ),
+              ),
             ],
-          )
+          ),
         ],
       ),
     );
